@@ -22,8 +22,6 @@ const NewIssuePage = () => {
   const { register, control, handleSubmit } = useForm<IssueForm>();
   const router = useRouter();
 
-  console.log("register", register);
-
   return (
     <form
       className="max-w-xl space-y-3"
@@ -40,7 +38,6 @@ const NewIssuePage = () => {
         name="description"
         control={control}
         render={({ field }) => {
-          console.log("field", field);
           return <SimpleMDE placeholder="Description" {...field} />;
         }}
       />
