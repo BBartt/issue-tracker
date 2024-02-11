@@ -19,9 +19,8 @@ import "easymde/dist/easymde.min.css";
 
 import { createIssueSchema } from "@/app/validationSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ErrorMessage } from "@/app/components/ErrorMessage";
 import Spinner from "@/app/components/Spinner";
-import delay from "delay";
+import { ErrorMessage } from "@/app/components";
 
 type IssueForm = z.infer<typeof createIssueSchema>;
 
