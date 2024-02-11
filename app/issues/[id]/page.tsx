@@ -5,7 +5,7 @@ interface Props {
   params: { id: string };
 }
 
-const Page = async ({ params }: Props) => {
+const IssueDetailPage = async ({ params }: Props) => {
   if (typeof params.id !== "number") notFound();
 
   const issue = await prisma.issue.findUnique({
@@ -26,4 +26,4 @@ const Page = async ({ params }: Props) => {
   );
 };
 
-export default Page;
+export default IssueDetailPage;
